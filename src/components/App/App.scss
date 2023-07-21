@@ -1,38 +1,25 @@
 @use '../../styles/variables' as v;
 
-.App {
-	text-align: center;
+main {
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  background: #00afa8;
+  gap: 30px;
 
-	&-logo {
-		height: 40vmin;
-		pointer-events: none;
+  &.dark {
+    background: #282c34;
+  }
 
-		@media (prefers-reduced-motion: no-preference) {
-			animation: App-logo-spin infinite 20s linear;
-		}
-	}
+  h1 {
+    font-size: 3.5rem;
+    color: #fff;
+  }
 
-	&-header {
-		background-color: v.$color-bg;
-		min-height: 100vh;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-		font-size: calc(10px + 2vmin);
-		color: v.$color;
-	}
-
-	&-link {
-		color: v.$color-primary;
-	}
-}
-
-@keyframes App-logo-spin {
-	from {
-		transform: rotate(0deg);
-	}
-	to {
-		transform: rotate(360deg);
-	}
+  button {
+    padding: 10px;
+  }
 }
