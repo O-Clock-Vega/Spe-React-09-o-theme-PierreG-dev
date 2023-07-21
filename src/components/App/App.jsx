@@ -1,3 +1,4 @@
+/* eslint-disable react/destructuring-assignment */
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable @typescript-eslint/no-useless-constructor */
 /* eslint-disable react/prefer-stateless-function */
@@ -5,7 +6,7 @@ import React from 'react';
 import './App.scss';
 
 class App extends React.Component {
-  constructor(props: any) {
+  constructor(props) {
     super(props);
 
     this.state = {
@@ -15,6 +16,7 @@ class App extends React.Component {
 
   componentDidUpdate(prevProps, prevState) {
     if (prevState.darkMode !== this.state.darkMode) {
+      // eslint-disable-next-line no-console
       console.log(
         'darkMode a changé de',
         prevState.darkMode,
